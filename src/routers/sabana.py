@@ -7,4 +7,4 @@ router = APIRouter()
 
 @router.get("/", response_model=str)
 def saludo():
-    return "Welcome Sabana"
+    return "Welcome Sabana prueba"
