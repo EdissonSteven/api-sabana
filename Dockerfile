@@ -1,9 +1,12 @@
-FROM python:3-alpine
+FROM python:3.6-slim
 
-WORKDIR /app
-COPY requirements.txt requirements.txt
+COPY . /sabana
+
+WORKDIR /sabana
+
 RUN pip install --no-cache-dir -r requirements.txt
-COPY . .
+
+RUN ["pytest", "-v", "--junitxml=reports/result.xml"]
 
 # Run the command to start the server
 CMD ["uvicorn", "main:app", "--reload", "--host", "0.0.0.0", "--port", "8000"]
