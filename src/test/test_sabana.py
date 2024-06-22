@@ -7,4 +7,4 @@ client = TestClient(app)
 def test_get_sabana():
     response = client.get("/sabana")
     assert response.status_code == 200
-    assert response.json() == "Welcome SABANA"
+    assert response.json() == "Welcome"
