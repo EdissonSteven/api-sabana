@@ -2,6 +2,5 @@ fastapi
 uvicorn
 python-dotenv
 pydantic
-psycopg2
 pytest
 requests
