@@ -7,4 +7,4 @@ client = TestClient(app)
 def test_get_diplomado():
     response = client.get("/diplomado")
     assert response.status_code == 200
-    assert response.json() == "Welcome diplomado"
+    assert response.json() == "Welcome"
