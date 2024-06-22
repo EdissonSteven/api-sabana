@@ -8,5 +8,7 @@ COPY . .
 # Set the environment variable for Flask
 ENV FLASK_APP=main.py
 
+RUN ["pytest", "-v", "--junitxml=reports/result.xml"]
+
 # Run the command to start the server
 CMD ["uvicorn", "main:app", "--reload", "--host", "0.0.0.0", "--port", "8000"]
